@@ -11,10 +11,15 @@
         <main class="chat-area">
             <header class="chat-header">
                 <h1>Chat with AI</h1>
+                <button id="newChatBtn">New Chat</button>
             </header>
             <section class="messages">
                 <!-- Messages will appear here -->
             </section>
+<!-- Add this inside the modal content -->
+<select id="repoSelect">
+    <option value="">Select a repository</option>
+</select>
             <div class="input-area">
                 <input type="text" id="userInput" placeholder="Type your message...">
                 <button id="sendBtn">Send</button>
@@ -30,9 +35,10 @@
             <input type="text" id="openaiKey" placeholder="OpenAI API Key" required>
             <input type="text" id="githubKey" placeholder="GitHub API Key" required>
             <button id="checkKeysBtn">Check Keys</button>
-            <p id="modalMessage" class="error-message"></p>
+            <p id="modalMessage" class=" hidden"></p>
         </div>
     </div>
+<div class="loading" id="loading" style="display: none;">Loading...</div>
 
     <script src="script.js"></script>
 </body>

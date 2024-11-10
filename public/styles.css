@@ -1,109 +1,101 @@
-/* Reset some basic styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.loading {
+    font-size: 16px;
+    color: #007bff;
+    margin: 10px 0;
 }
 
+.messages div {
+    margin: 5px 0;
+}
+
+.messages div:nth-child(odd) {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.messages div:nth-child(even) {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+}
 .container {
-    display: flex;
     width: 80%;
-    height: 90vh;
-    border-radius: 8px;
+    margin: auto;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Chat area styling */
 .chat-area {
-    width: 100%;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .chat-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .messages {
-    flex: 1;
-    padding: 20px;
+    height: 400px;
     overflow-y: auto;
-}
-
-.message {
-    margin-bottom: 15px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
     padding: 10px;
-    border-radius: 8px;
-}
-
-.message.user {
-    background-color: #d1e7dd;
-    text-align: right;
-}
-
-.message.bot {
-    background-color: #e2e3e5;
-    text-align: left;
+    border-radius: 5px;
 }
 
 .input-area {
     display: flex;
-    border-top: 1px solid #ddd;
 }
 
-input[type="text"] {
+.input-area input {
     flex: 1;
     padding: 10px;
-    border: none;
-    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #333;
+.input-area button {
+    padding: 10px;
+    background: #007bff;
     color: #fff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #555;
+.input-area button:hover {
+    background: #0056b3;
 }
 
-/* Modal styling */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba (0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
 }
 
 .close {
@@ -120,7 +112,6 @@ button:hover {
     cursor: pointer;
 }
 
-.error-message {
-    color: red;
-    margin-top: 10px;
+.hidden {
+    display: none;
 }
