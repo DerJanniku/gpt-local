@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with AI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <main class="chat-area">
+            <header class="chat-header">
+                <h1>Chat with AI</h1>
+            </header>
+            <section class="messages">
+                <!-- Messages will appear here -->
+            </section>
+            <div class="input-area">
+                <input type="text" id="userInput" placeholder="Type your message...">
+                <button id="sendBtn">Send</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for API Key Entry -->
+    <div class="modal" id="apiKeyModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Enter API Keys</h2>
+            <input type="text" id="openaiKey" placeholder="OpenAI API Key" required>
+            <input type="text" id="githubKey" placeholder="GitHub API Key" required>
+            <button id="checkKeysBtn">Check Keys</button>
+            <p id="modalMessage" class="error-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
